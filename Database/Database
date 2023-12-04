@@ -1,0 +1,8 @@
+const mongoose = require("mongoose");
+
+async function MakedbConnect()
+{
+   await mongoose.connect("mongodb+srv://aligohar:LUkdSqHFqxw3JbTO@cluster0.yll3xil.mongodb.net/Todolist?retryWrites=true&w=majority").
+   then(()=> console.log("db Connected")).catch((err) => console.log(err))
+}
+module.exports = MakedbConnect;
